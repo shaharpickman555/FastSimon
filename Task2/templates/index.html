@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Task 2 Database</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <h1>Task 2 Database</h1>
+
+      <form id="command-form">
+        <label>
+          Operation
+          <select id="operation" name="operation">
+            <option value="set">SET</option>
+            <option value="get">GET</option>
+            <option value="unset">UNSET</option>
+            <option value="numequalto">NUMEQUALTO</option>
+            <option value="undo">UNDO</option>
+            <option value="redo">REDO</option>
+            <option value="end">END</option>
+          </select>
+        </label>
+
+        <label id="name-row">
+          Name
+          <input id="name" name="name" autocomplete="off">
+        </label>
+
+        <label id="value-row">
+          Value
+          <input id="value" name="value" autocomplete="off">
+        </label>
+
+        <button type="submit">Run</button>
+      </form>
+
+      <output id="result" aria-live="polite">Ready</output>
+    </section>
+  </main>
+</body>
+</html>
